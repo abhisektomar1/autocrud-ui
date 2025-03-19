@@ -1,0 +1,173 @@
+/* Table layout */
+table {
+  width: max-content;
+  min-width: 100%;
+  table-layout: fixed;
+}
+
+/* Cell styling */
+th, td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Resize handle */
+.resize-handle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  cursor: col-resize;
+  background-color: #e5e7eb;
+  transition: background-color 0.2s;
+  z-index: 20;
+}
+
+.resize-handle:hover,
+.resize-handle.resizing {
+  background-color: #3b82f6;
+}
+
+/* Sticky columns */
+.sticky-header th {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  background: white;
+}
+
+.sticky-index {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  background: white;
+}
+
+/* Modern Table Styles */
+.modern-table {
+  @apply w-full border-collapse bg-white;
+  @apply border border-gray-200/80;
+  font-size: 0.75rem; /* 12px */
+}
+
+.modern-table-header {
+  @apply bg-gray-50/80 backdrop-blur-sm sticky top-0 z-20;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+  height: 32px;
+}
+
+.modern-table-header th {
+  @apply px-2.5 py-1 text-left font-medium text-gray-600;
+  border-right: 1px solid rgba(229, 231, 235, 0.8);
+  @apply transition-colors duration-200;
+  font-size: 0.75rem;
+}
+
+.modern-table-row {
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+  @apply transition-colors duration-200;
+  height: 30px;
+}
+
+.modern-table-row:hover {
+  @apply bg-gray-50/60;
+}
+
+.modern-table-cell {
+  @apply px-2.5 py-1 text-gray-700;
+  border-right: 1px solid rgba(229, 231, 235, 0.8);
+  @apply transition-colors duration-200;
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+
+.modern-table-cell-sticky {
+  @apply sticky bg-white;
+  border-right: 1px solid rgba(229, 231, 235, 0.8);
+  @apply shadow-[1px_0_0_0_rgba(229,231,235,0.8)];
+}
+
+/* Zebra striping */
+.modern-table-row:nth-child(even) {
+  @apply bg-gray-50/30;
+}
+
+/* Input and Button Styles */
+.modern-input {
+  @apply h-7 px-2 py-0.5 rounded-lg border border-gray-200;
+  @apply bg-white shadow-sm transition-shadow duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary;
+  font-size: 0.75rem;
+}
+
+.modern-button {
+  @apply px-2.5 py-1 font-medium rounded-lg;
+  @apply transition-colors duration-200;
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  font-size: 0.75rem;
+}
+
+.modern-button-primary {
+  @apply bg-primary text-white hover:bg-primary/90;
+  @apply shadow-sm hover:shadow-md;
+}
+
+.modern-button-secondary {
+  @apply bg-secondary text-white hover:bg-secondary/90;
+  @apply shadow-sm hover:shadow-md;
+}
+
+.modern-button-outline {
+  @apply border border-gray-200 bg-white text-gray-700;
+  @apply hover:bg-gray-50 hover:border-gray-300;
+  @apply shadow-sm;
+}
+
+/* Checkbox styles */
+.modern-checkbox {
+  @apply h-3 w-3 rounded border-gray-300 text-primary;
+  @apply focus:ring-2 focus:ring-primary/20;
+  @apply transition-colors duration-200;
+}
+
+/* Icon wrapper */
+.modern-icon {
+  @apply h-3 w-3 text-gray-500 transition-colors duration-200;
+}
+
+.modern-icon-primary {
+  @apply text-primary;
+}
+
+.modern-icon-secondary {
+  @apply text-secondary;
+}
+
+/* Select Field Options */
+.select-option-label {
+  @apply inline-flex items-center px-2 py-0.5 rounded-md font-medium;
+  font-size: 0.75rem;
+}
+
+.select-option-1 {
+  @apply bg-blue-100 text-blue-500;
+}
+
+.select-option-2 {
+  @apply bg-purple-100 text-purple-500;
+}
+
+.select-option-3 {
+  @apply bg-emerald-100 text-emerald-500;
+}
+
+.select-option-4 {
+  @apply bg-amber-100 text-amber-500;
+}
+
+.select-option-5 {
+  @apply bg-rose-100 text-rose-500;
+} 
